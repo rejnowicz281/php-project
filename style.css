@@ -45,7 +45,6 @@ main {
     background-color: rgb(58, 58, 58);
     position: relative;
     padding: 10px;
-    cursor: pointer;
     transition: 0.2s;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
@@ -100,7 +99,8 @@ input[type="text"] {
     font-size: 10px;
 }
 
-#edytuj-ksiazke-button {
+#edytuj-ksiazke-button,
+#aktualizuj-ksiazke-button {
     margin-top: 10px;
     width: 100%;
     padding: 10px;
@@ -111,7 +111,8 @@ input[type="text"] {
     cursor: pointer;
 }
 
-#edytuj-ksiazke-button:hover {
+#edytuj-ksiazke-button:hover,
+#aktualizuj-ksiazke-button:hover {
     background-color: rgb(29, 29, 29);
 }
 
@@ -178,6 +179,57 @@ input[type="text"] {
 
 #dodaj-ksiazke-button:hover {
     background-color: rgb(70, 70, 70);
+}
+
+#link-powrotu {
+    font-size: 150px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+#link-powrotu:hover {
+    color: wheat;
+}
+
+.edytuj-ksiazke-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 50%;
+    height: 50%;
+    background-color: rgb(54, 54, 54);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+
+.edytuj-ksiazke-container form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.edytuj-ksiazke-container form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.edytuj-ksiazke-container form input {
+    font-size: 30px;
+    text-align: center;
+}
+
+#aktualizuj-ksiazke-button {
+    font-size: 30px;
+    padding: 20px;
 }
 
 @media (max-width: 1400px) {

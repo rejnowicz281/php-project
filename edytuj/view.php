@@ -10,19 +10,26 @@
 </head>
 
 <body>
-    <form action="edytuj.php" method="POST">
-        <?php
-        $id = $_GET["id"];
-        $tytul = $_GET["tytul"];
-        $autor = $_GET["autor"];
-        ?>
-        <input type='hidden' name='id' value='<?= $id ?>'>
-        <label for="tytul">Tytuł Książki</label>
-        <input type="text" id="tytul" name="tytul" value='<?= $tytul ?>' required>
-        <label for="autor">Autor Książki</label>
-        <input type="text" id="autor" name="autor" value='<?= $autor ?>' required>
-        <input type="submit">
-    </form>
+    <a href="../index.php" id="link-powrotu">←</a>
+    <div class="edytuj-ksiazke-container">
+        <form action="edytuj.php" method="POST">
+            <?php
+            $id = $_GET["id"];
+            $tytul = $_GET["tytul"];
+            $autor = $_GET["autor"];
+            ?>
+            <input type='hidden' name='id' value='<?= $id ?>'>
+            <div>
+                <label for="tytul">Tytuł Książki</label>
+                <input type="text" id="tytul" name="tytul" value='<?= $tytul ?>' required>
+            </div>
+            <div>
+                <label for="autor">Autor Książki</label>
+                <input type="text" id="autor" name="autor" value='<?= $autor ?>' required>
+            </div>
+            <button type="submit" id="aktualizuj-ksiazke-button">Aktualizuj książkę</button>
+        </form>
+    </div>
 </body>
 
 </html>
